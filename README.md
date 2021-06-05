@@ -1,4 +1,12 @@
-# vscode-rickroll README
+<h1 align="center">
+  <br>
+    <img src="" alt="logo" width="200">
+  <br>
+  vscode-rickroll
+  <br>
+  <br>
+</h1>
+
 
 This is the README for your extension "vscode-rickroll". After writing up a brief description, we recommend including the following sections.
 

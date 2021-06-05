@@ -2,7 +2,17 @@
 	"name": "vscode-rickroll",
 	"displayName": "vscode-rickroll",
 	"description": "",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"author": "Woohaik",
+	"publisher": "Woohaik",
+	"icon": "resources/logo.jpg",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Woohaik/vscode-rickroll"
+	},
+	"bugs": {
+		"url": "https://github.com/Woohaik/vscode-rickroll/issues"
+	},
 	"engines": {
 		"vscode": "^1.56.0"
 	},
@@ -21,7 +31,7 @@
 			},
 			{
 				"command": "vscode-rickroll.removeBG",
-				"title": "remove RickBg"
+				"title": "RickRoll remove Rick"
 			}
 		]
 	},

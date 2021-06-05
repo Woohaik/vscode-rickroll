@@ -17,7 +17,7 @@ class Main {
     }
 
     private show() {
-        if (Math.floor(Math.random() * 15) === 7) { // Randomly shows after some returns;
+        if (Math.floor(Math.random() * 20) === 7) { // Randomly shows after some returns;
             saveCss();
             vscode.commands.executeCommand('workbench.action.files.save'); // Saving your progress before reloading :p
             vscode.commands.executeCommand('workbench.action.reloadWindow');
