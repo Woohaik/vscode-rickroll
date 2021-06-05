@@ -1,6 +1,5 @@
-import { saveCss, removeCss } from "./getCss";
+import { saveCss, removeCss } from "./css";
 import * as vscode from 'vscode';
-
 
 class Main {
     private lastLine: number;
@@ -8,7 +7,6 @@ class Main {
     private _subscriptions: vscode.Disposable[] = [];
     constructor() {
         this.lastLine = 0;
-        console.log("Im entered here");
         vscode.window.onDidChangeTextEditorSelection(this.evHandler, this, this._subscriptions);
         vscode.window.onDidChangeActiveTextEditor(this.evHandler, this, this._subscriptions);
         this._disposable = vscode.Disposable.from(...this._subscriptions);
@@ -19,30 +17,24 @@ class Main {
     }
 
     private show() {
-        saveCss();
-        vscode.commands.executeCommand('workbench.action.files.save'); // Saving your progress before reloading :p
-        vscode.commands.executeCommand('workbench.action.reloadWindow');
+        if (Math.floor(Math.random() * 15) === 7) { // Randomly shows after some returns;
+            saveCss();
+            vscode.commands.executeCommand('workbench.action.files.save'); // Saving your progress before reloading :p
+            vscode.commands.executeCommand('workbench.action.reloadWindow');
+        }
     }
 
     private evHandler(e: any) {
         const returned = this.hasEnteredReturn(e);
-        console.log(returned);
         if (returned) this.show();
     }
 
     private hasEnteredReturn(e: vscode.TextEditorSelectionChangeEvent): boolean {
-        let lastPosition: vscode.Selection = e.textEditor.selections[0];
-        console.log("LastLIne xd", this.lastLine);
+        const lastPosition: vscode.Selection = e.textEditor.selections[0];
         let lineChanged = (lastPosition.end.line !== this.lastLine);
         this.lastLine = lastPosition.end.line;
         return lineChanged;
     }
-}
-
-
-export const uninstall = () => {
-    removeCss();
-    vscode.commands.executeCommand('workbench.action.reloadWindow');
 }
 
 

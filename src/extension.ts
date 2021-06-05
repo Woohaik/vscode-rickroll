@@ -1,28 +1,22 @@
 import * as vscode from 'vscode';
-import Main, { uninstall } from "./main";
-
-type dispo = { dispose(): any }
-
-let watcher: dispo;
+import { hasTheBg, removeCss } from './css';
+import Main from "./main";
+import { play } from './player';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "vscode-rickroll" is now active!');
-	let disposable = vscode.commands.registerCommand('vscode-rickroll.info', () => {
+	if (hasTheBg()) play(); // Sound will start if the bg has been changed
+	let disposable: vscode.Disposable = vscode.commands.registerCommand('vscode-rickroll.info', () => {
 		vscode.window.showInformationMessage(
 			`Thank you for installing vscode-rickroll, Good rickrolls! 
 			Rickroll will be activated random while typing`
 		);
 	});
-
-	let disposable2 = vscode.commands.registerCommand('vscode-rickroll.removeBG', () => {
-		uninstall();
+	vscode.commands.registerCommand('vscode-rickroll.removeBG', () => {
+		removeCss();
+		vscode.commands.executeCommand('workbench.action.reloadWindow');
 	});
-
-
-
-	watcher = watcher || Main; // When restart continue watching
 	context.subscriptions.push(disposable);
-	context.subscriptions.push(watcher);
+	context.subscriptions.push(Main);
 }
 
 export function deactivate() {
