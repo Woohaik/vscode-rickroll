@@ -1,21 +1,30 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import Main from "./main";
+import Main, { uninstall } from "./main";
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
+type dispo = { dispose(): any }
+
+let watcher: dispo;
+
 export function activate(context: vscode.ExtensionContext) {
-
-
 	console.log('Congratulations, your extension "vscode-rickroll" is now active!');
-
-	Main.start();
-	let disposable = vscode.commands.registerCommand('vscode-rickroll.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from vscode-rickroll!');
+	let disposable = vscode.commands.registerCommand('vscode-rickroll.info', () => {
+		vscode.window.showInformationMessage(
+			`Thank you for installing vscode-rickroll, Good rickrolls! 
+			Rickroll will be activated random while typing`
+		);
 	});
+
+	let disposable2 = vscode.commands.registerCommand('vscode-rickroll.removeBG', () => {
+		uninstall();
+	});
+
+
+
+	watcher = watcher || Main; // When restart continue watching
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(watcher);
 }
 
-
-export function deactivate() { }
+export function deactivate() {
+	// lol
+}

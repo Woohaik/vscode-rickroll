@@ -10,14 +10,18 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vscode-rickroll.helloWorld"
+		"*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-rickroll.helloWorld",
-				"title": "Hello World"
+				"command": "vscode-rickroll.info",
+				"title": "RickRoll info"
+			},
+			{
+				"command": "vscode-rickroll.removeBG",
+				"title": "remove RickBg"
 			}
 		]
 	},
