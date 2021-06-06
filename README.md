@@ -1,78 +1,40 @@
 <h1 align="center">
   <br>
-    <img src="" alt="logo" width="200">
+    <img src="https://user-images.githubusercontent.com/74992119/120929534-b158d280-c6e9-11eb-89f0-beccefaba64a.jpg" alt="logo" width="200">
   <br>
-  vscode-rickroll
+  <u>vscode-rickroll </u>
   <br>
-  <br>
+  Rickroll your co-workers 
 </h1>
 
 
-This is the README for your extension "vscode-rickroll". After writing up a brief description, we recommend including the following sections.
+## Usage
 
-## Features
+Just install the extension and leave it, rick will appear randomly after some keystrokes while your friend is working _(Music Included)_.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![inAction](https://user-images.githubusercontent.com/74992119/120932525-7f01a200-c6f6-11eb-9570-e98f8dc903b4.gif)
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+## Warnings
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+vscode-rickroll works by directly editing the "desktop.main.css" file, this warning will appear because vscode notice that the checksum does not match, you could click on (never show again) to avoid it, but this wont remove the "unsupported" tag. Look for a fix checksum to restore it.
 
-## Requirements
+![warn](https://user-images.githubusercontent.com/74992119/120929523-a43be380-c6e9-11eb-9cac-650b79935567.PNG)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+The tag will disappear by using the command "RickRoll remove Rick" the css will be removed after that, but the extension will continue watching for typing then pop up the rick roll again. To completely remove the extension right after "RickRoll remove Rick" uninstall the extension and restart the window.
 
-## Extension Settings
+## Uninstall
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+If the extension is already rickRolling, first you have to run the following command to remove the generated css from the vscode file:
 
-For example:
+- `RickRoll remove Rick`
 
-This extension contributes the following settings:
+![removeRickCommand](https://user-images.githubusercontent.com/74992119/120931898-d81c0680-c6f3-11eb-859d-cb3c14a5f1e8.png)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+- Uninstall the extension and restart the window.
 
-## Known Issues
+## 
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+**Repository:** [https://github.com/Woohaik/vscode-rickroll](https://github.com/Woohaik/vscode-rickroll)
 
 **Enjoy!**

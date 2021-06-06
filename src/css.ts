@@ -8,10 +8,21 @@ const reExp = new RegExp("\\/\\*ext-" + EXTENSION_NAME + "-start\\*\\/[\\s\\S]*?
 const cssName: string = vscode.version >= "1.38" ? 'workbench.desktop.main.css' : 'workbench.main.css';
 const cssFilePath = path.join(path.dirname((require.main as NodeModule).filename), 'vs', 'workbench', cssName);
 const toSaveCss = `/*ext-${EXTENSION_NAME}-start*/
+@keyframes doRick{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0 !important;
+    }
+}
 body{
+    animation: doRick 1.5s reverse forwards;
     background-size:contain;
+    animation-delay: 2s;
     background-repeat: no-repeat;
-    opacity:0.8;
     background-position:center center;
     background-image:url('${base64image}'); 
 }
@@ -33,4 +44,4 @@ export {
     saveCss,
     removeCss,
     hasTheBg
-}
+};

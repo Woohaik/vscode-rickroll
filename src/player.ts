@@ -1,8 +1,8 @@
 import * as cp from "child_process";
 import * as path from 'path';
 const player = require('play-sound')();
-const _isWindows = process.platform === 'win32';
-const _WindowsPath = path.join(__dirname, "/../audio/sounder.exe");
+const isWindows = process.platform === 'win32';
+const windowsPath = path.join(__dirname, "/../audio/sounder.exe");
 
 const playerAdapter = () => ({
     afplay: ['-v', 100],
@@ -12,8 +12,8 @@ const playerAdapter = () => ({
 export const play = (): Promise<void> => {
     const rickPath = path.join(__dirname, "/../audio/never.wav");
     return new Promise((resolve, reject) => {
-        if (_isWindows) {
-            cp.execFile(_WindowsPath, ['/vol', "100", rickPath]);
+        if (isWindows) {
+            cp.execFile(windowsPath, ['/vol', "100", rickPath]);
             resolve();
         } else {
             player.play(rickPath, playerAdapter(), (err: any) => {
@@ -25,4 +25,4 @@ export const play = (): Promise<void> => {
             });
         }
     });
-}
+};

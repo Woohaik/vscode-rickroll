@@ -4,7 +4,7 @@ import Main from "./main";
 import { play } from './player';
 
 export function activate(context: vscode.ExtensionContext) {
-	if (hasTheBg()) play(); // Sound will start if the bg has been changed
+	hasTheBg() && play(); // Sound will start if the bg has been changed
 	let disposable: vscode.Disposable = vscode.commands.registerCommand('vscode-rickroll.info', () => {
 		vscode.window.showInformationMessage(
 			`Thank you for installing vscode-rickroll, Good rickrolls! 

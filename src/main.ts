@@ -26,7 +26,7 @@ class Main {
 
     private evHandler(e: any) {
         const returned = this.hasEnteredReturn(e);
-        if (returned) this.show();
+        returned && this.show();
     }
 
     private hasEnteredReturn(e: vscode.TextEditorSelectionChangeEvent): boolean {
