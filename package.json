@@ -1,7 +1,7 @@
 {
 	"name": "vscode-rickroll",
 	"displayName": "vscode-rickroll",
-	"description": "",
+	"description": "Rickroll your co-workers with vscode-rickroll",
 	"version": "1.0.0",
 	"author": "Woohaik",
 	"publisher": "Woohaik",
