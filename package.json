@@ -2,13 +2,13 @@
 	"name": "vscode-rickroll",
 	"displayName": "vscode-rickroll",
 	"description": "Rickroll your co-workers with vscode-rickroll",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Woohaik",
 	"publisher": "Woohaik",
 	"icon": "resources/logo.jpg",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Woohaik/vscode-rickroll"
+		"url": "https://github.com/Woohaik/vscode-rickroll"
 	},
 	"bugs": {
 		"url": "https://github.com/Woohaik/vscode-rickroll/issues"

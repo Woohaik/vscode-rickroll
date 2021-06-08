@@ -10,18 +10,19 @@ const cssFilePath = path.join(path.dirname((require.main as NodeModule).filename
 const toSaveCss = `/*ext-${EXTENSION_NAME}-start*/
 @keyframes doRick{
     from {
-        transform: scale(1);
-        opacity:0.8;
+        transform: scale(2);
+        opacity:1;
     }
     to {
-        transform: scale(2);
-        opacity:0 !important;
+        transform: scale(1);
+        opacity:0.7;
     }
 }
 body{
-    animation: doRick 1.5s reverse forwards;
+    animation: doRick 1.8s linear 1 normal forwards;
     background-size:contain;
-    animation-delay: 2s;
+    opacity:1;
+    animation-delay: 2.4s;
     background-repeat: no-repeat;
     background-position:center center;
     background-image:url('${base64image}'); 

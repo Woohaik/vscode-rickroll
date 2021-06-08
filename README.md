@@ -1,3 +1,6 @@
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/woohaik.vscode-rickroll.svg?style=flat-square)](https://vsmarketplacebadge.apphb.com/installs/woohaik.vscode-rickroll.svg?style=flat-square)
+[![Version](https://vsmarketplacebadge.apphb.com/version/woohaik.vscode-rickroll.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=woohaik.vscode-rickroll)
+
 <h1 align="center">
   <br>
     <img src="https://user-images.githubusercontent.com/74992119/120929534-b158d280-c6e9-11eb-89f0-beccefaba64a.jpg" alt="logo" width="200">
@@ -7,13 +10,11 @@
   Rickroll your co-workers 
 </h1>
 
-
 ## Usage
 
 Just install the extension and leave it, rick will appear randomly after some keystrokes while your friend is working _(Music Included)_.
 
 ![inAction](https://user-images.githubusercontent.com/74992119/120932525-7f01a200-c6f6-11eb-9570-e98f8dc903b4.gif)
-
 
 ## Warnings
 
