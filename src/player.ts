@@ -9,6 +9,8 @@ const playerAdapter = () => ({
     mplayer: ['-af', `volume=100`],
 });
 
+
+
 export const play = (): Promise<void> => {
     const rickPath = path.join(__dirname, "/../audio/never.wav");
     return new Promise((resolve, reject) => {

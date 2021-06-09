@@ -6,3 +6,7 @@ All notable changes to the "vscode-rickroll" extension will be documented in thi
 ## [v1.0.0]
 
 - Initial release
+
+## [v1.0.1]
+
+- Adjusted Timer delay and opacity
